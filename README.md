@@ -1,8 +1,8 @@
 # Inverted Pendulum Control System
 
-![Project Image_1](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg) 
+![Project Image_1](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/shape.jpg) 
 
-![Project Image_2](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/shape.jpg) 
+![Project Image_2](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg) 
 
 ## Table of Contents
 - [Introduction](#introduction)
