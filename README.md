@@ -1,6 +1,8 @@
 # Inverted Pendulum Control System
 
-![Project Image](#) <!-- Placeholder for project image -->
+![Project Image_1](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg) 
+
+![Project Image_2](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/shape.jpg) 
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -12,7 +14,6 @@
 - [How to Run the Project](#how-to-run-the-project)
 - [Contributing](#contributing)
 - [License](#license)
-- [Back to Top](#) <!-- Placeholder for back to top -->
 
 ## Introduction
 The inverted pendulum is a classic problem in dynamics and control theory, where the goal is to design a controller to keep a pendulum upright by moving a base. This project involves modeling, simulation, and controller design to stabilize the system using Matlab and other tools. The pendulum starts at an unstable equilibrium (θ = 0) and needs to be balanced at the top (θ = 180°).
