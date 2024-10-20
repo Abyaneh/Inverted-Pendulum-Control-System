@@ -78,7 +78,7 @@ grid on;
 ## How to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/inverted-pendulum-system.git
+   git clone https://github.com/Abyaneh/Inverted-Pendulum-Control-System/tree/main
    cd inverted-pendulum-system
    ```
 2. Open Matlab and navigate to the project directory.
