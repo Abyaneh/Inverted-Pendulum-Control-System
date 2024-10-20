@@ -10,7 +10,6 @@
 - [Matlab Code for Free Body Diagram](#matlab-code-for-free-body-diagram)
 - [Technologies & Tools Used](#technologies--tools-used)
 - [How to Run the Project](#how-to-run-the-project)
-- [Team Members](#team-members)
 - [Contributing](#contributing)
 - [License](#license)
 - [Back to Top](#) <!-- Placeholder for back to top -->
@@ -85,9 +84,6 @@ grid on;
 2. Open Matlab and navigate to the project directory.
 3. Run the main script `pendulum_control.m` to simulate and visualize the system's response.
 
-## Team Members
-- **Mohammad Maleki Abiyaneh** - Lead Developer and Researcher
-- **Ali Nahvi** - Project Supervisor
 
 ## Contributing
 Contributions are welcome! Please follow these steps:
