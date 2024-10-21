@@ -125,7 +125,7 @@ Root Locus Diagram **with** PID Control:
 
 ![Root Locus Diagram with PID Control](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/77.jpg)
     
-    The root locus plot shows the placement of poles and zeros of the system both before and after applying the PID controller. The poles are moved toward more stable positions after applying the controller.
+The root locus plot shows the placement of poles and zeros of the system both before and after applying the PID controller. The poles are moved toward more stable positions after applying the controller.
 
 [Back to Top](#table-of-contents)
 
