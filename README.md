@@ -108,9 +108,11 @@ The following graphs show the system’s response to step input and the correspo
 1. **Step Response of the System:**
 
 Step Response **before** PID control:
+
 ![Step Response Graph](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/70_1.jpg) 
 
 Step Response **after** PID control:
+
 ![Step Response Graph](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/70_2.jpg) 
 
 The graph above shows the system’s response to a step input with the PID controller applied, illustrating how quickly and smoothly the pendulum stabilizes.
