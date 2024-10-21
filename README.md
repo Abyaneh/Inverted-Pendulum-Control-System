@@ -118,11 +118,12 @@ Step Response **after** PID control:
 The graph above shows the system’s response to a step input with the PID controller applied, illustrating how quickly and smoothly the pendulum stabilizes.
 
 2. **Impulse Response of the System:**
-    ![Impulse Response Graph](#) <!-- Placeholder for Impulse Response Graph -->
+   
+ ![Impulse Response](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/62.jpg) 
 
-    This graph demonstrates how the system reacts to a brief disturbance (impulse input), and how it returns to the stable equilibrium position under PID control.
+This graph shows impulse response.
 
-4. **Root Locus Analysis:**
+3. **Root Locus Analysis:**
 
 Root Locus Diagram **before** PID Control:
 
