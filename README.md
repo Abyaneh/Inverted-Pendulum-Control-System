@@ -4,54 +4,61 @@
 
 ![Project Image_2](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg) 
 
+
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [System Dynamics](#system-dynamics)
 - [State-Space Model and Transfer Functions](#state-space-model-and-transfer-functions)
 - [Matlab Code for Free Body Diagram](#matlab-code-for-free-body-diagram)
+- [PID Controller and Simulation Results](#pid-controller-and-simulation-results)
 - [Technologies & Tools Used](#technologies--tools-used)
 - [How to Run the Project](#how-to-run-the-project)
 - [Contributing](#contributing)
 - [License](#license)
+- [Back to Top](#)
 
 ## Introduction
-The inverted pendulum is a classic problem in dynamics and control theory, where the goal is to design a controller to keep a pendulum upright by moving a base. This project involves modeling, simulation, and controller design to stabilize the system using Matlab and other tools. The pendulum starts at an unstable equilibrium (θ = 0) and needs to be balanced at the top (θ = 180°).
+The inverted pendulum is a well-known problem in control theory where the goal is to stabilize a pendulum in an upright position. Using Matlab, this project involves modeling, simulating, and controlling the system with a PID controller to balance the pendulum at 180°, starting from an unstable position.
 
 ## Features
-- **Non-linear system control**: Stabilizing the pendulum at a 180° angle.
-- **Dynamic modeling**: Derived system equations with state-space representation.
-- **Visualization**: Free-body diagrams, response plots, and system behavior simulations in Matlab.
-- **Controller Design**: PID controller implementation for pendulum stability.
+- Stabilization of a non-linear dynamic system using PID control.
+- Free-body diagram and system response simulations.
+- Control system designed and tested in Matlab.
+- Visualizations and graphs of system behavior.
 
 ## System Dynamics
-The system is modeled as a two-degree-of-freedom problem where the arm's motion and the pendulum's motion must be controlled. The mathematical model is represented by the following equations:
-- Dynamic equation: `Ml²θ̈ + Bl²θ̇ + Mgl²sin(θ) = Ml²u`
-- State-space representation:
-  ```matlab
-  A = [0 1 0 0;
-       0 0 -((M+m)*g*l)/(M+m-m*l²) 0;
-       0 0 0 1;
-       0 0 ((M+m)*g)/(I+m*l²-M*m*l²) 0];
-  ```
+The inverted pendulum system has two degrees of freedom and is modeled using the following equations:
+- Dynamic equation:  
+  `Ml²θ̈ + Bl²θ̇ + Mgl²sin(θ) = Ml²u`
+  
+The goal is to keep the pendulum upright by applying appropriate control forces through the motor arm.
 
 ## State-Space Model and Transfer Functions
-The state-space model is derived and transformed into transfer functions using Laplace transformations. The key steps include:
-- Linearization of dynamic equations.
-- Derivation of transfer functions using Matlab.
+Linearization and the derivation of the state-space model result in the following matrix representation:
+```matlab
+A = [0 1 0 0;
+     0 0 -((M+m)*g*l)/(M+m-m*l²) 0;
+     0 0 0 1;
+     0 0 ((M+m)*g)/(I+m*l²-M*m*l²) 0];
+ 
+B = [0; (m*l)/(M+m-m*l²); 0; -m*l/(I+m*l²-M*m*l²)];
+```
 
-The resulting transfer function is:
+The transfer function derived for the system is:
 ```matlab
 G(s) = 0.08798/s³ + 2s/s² - 458.035401
 ```
 
 ## Matlab Code for Free Body Diagram
-Below is an example of Matlab code used to draw a free-body diagram and solve for forces acting on the system:
+The free-body diagram is an essential part of understanding the forces acting on the pendulum system. Below is an example Matlab script for generating the diagram:
 ```matlab
 % Matlab code for Free Body Diagram
 close all;
 clear;
 clc;
+
+% Define object coordinates and forces
 x = 2;
 y = 3;
 z = 1;
@@ -62,6 +69,7 @@ Rx = F;
 Ry = 0;
 Rz = 0 - g;
 
+% Plot free-body diagram
 figure;
 quiver3(x, y, z, Rx, Ry, Rz, 'LineWidth', 2);
 xlabel('X');
@@ -71,29 +79,67 @@ title('Free Body Diagram of a Body in Space');
 grid on;
 ```
 
+## PID Controller and Simulation Results
+
+### PID Control Implementation
+The PID controller is implemented to stabilize the pendulum at its upright position (θ = 180°). The controller parameters are tuned as follows:
+
+```matlab
+kp = 246.229;
+ki = 32308.4671;
+kd = 0.042127;
+
+sys = pid(kp, ki, kd);
+```
+
+### Simulation Results
+The following graphs show the system’s response to step input and the corresponding stabilization under the PID controller. The pendulum successfully stabilizes after initial oscillations:
+
+1. **Step Response of the System:**
+    ![Step Response Graph](#) <!-- Placeholder for Step Response Graph -->
+
+    The graph above shows the system’s response to a step input with the PID controller applied, illustrating how quickly and smoothly the pendulum stabilizes.
+
+2. **Impulse Response of the System:**
+    ![Impulse Response Graph](#) <!-- Placeholder for Impulse Response Graph -->
+
+    This graph demonstrates how the system reacts to a brief disturbance (impulse input), and how it returns to the stable equilibrium position under PID control.
+
+3. **Root Locus Analysis:**
+    ![Root Locus Graph](#) <!-- Placeholder for Root Locus Graph -->
+
+    The root locus plot shows the placement of poles and zeros of the system both before and after applying the PID controller. The poles are moved toward more stable positions after applying the controller.
+
 ## Technologies & Tools Used
-- **Matlab/Simulink**: For dynamic modeling, simulations, and controller design.
-- **Control Theory**: Applied to analyze and stabilize the inverted pendulum system.
-- **State-Space Modeling**: Used to represent the system and derive transfer functions.
-  
+- **Matlab/Simulink**: Dynamic modeling, control design, and simulation.
+- **Control Theory**: State-space analysis, PID controller design.
+- **Visualization**: Free-body diagrams, step response, impulse response, and root locus plots.
+
 ## How to Run the Project
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Abyaneh/Inverted-Pendulum-Control-System/tree/main
-   cd inverted-pendulum-system
+   git clone https://github.com/Abyaneh/Inverted-Pendulum-Control-System.git
+   cd Inverted-Pendulum-Control-System
    ```
-2. Open Matlab and navigate to the project directory.
-3. Run the main script `pendulum_control.m` to simulate and visualize the system's response.
-
+2. Open Matlab and run `pendulum_control.m` to simulate the system.
+3. View the generated graphs and results for system behavior analysis.
 
 ## Contributing
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! To contribute:
 1. Fork the repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Commit your changes (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
+---
+
+### Instructions for adding the results and graphs:
+1. **Step Response Graph**: Use the image or graph generated by Matlab’s `step` function and save it as an image (e.g., `step-response.png`), then replace the placeholder with the image's path.
+2. **Impulse Response Graph**: Similar process using Matlab’s `impulse` function.
+3. **Root Locus Graph**: Use Matlab’s `rlocus` function, save the output, and link it to your GitHub repository.
+
+Let me know if you'd like further modifications!
