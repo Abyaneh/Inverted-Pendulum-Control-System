@@ -116,8 +116,15 @@ The following graphs show the system’s response to step input and the correspo
     This graph demonstrates how the system reacts to a brief disturbance (impulse input), and how it returns to the stable equilibrium position under PID control.
 
 3. **Root Locus Analysis:**
-    ![Root Locus Graph](#) <!-- Placeholder for Root Locus Graph -->
 
+Root Locus Diagram **without** PID Control:
+
+    ![Root Locus Diagram without PID Control](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/76.jpg)
+
+Root Locus Diagram **with** PID Control:
+
+    ![Root Locus Diagram with PID Control](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/77.jpg)
+    
     The root locus plot shows the placement of poles and zeros of the system both before and after applying the PID controller. The poles are moved toward more stable positions after applying the controller.
 
 [Back to Top](#table-of-contents)
