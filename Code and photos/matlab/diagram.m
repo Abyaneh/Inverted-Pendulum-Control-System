@@ -1,31 +1,31 @@
 close all
 clear
 clc
-% تعریف مختصات جسم
+% Definition of body coordinates
 x = 2;
 y = 3;
 z = 1;
 
-% تعریف نیروی وارده
+% Definition of incoming force
 F = 10;
 Fx = F;
 Fy = 0;
 Fz = 0;
 
-% تعریف موقعیت نیرو
+% Definition of force position
 nx = 1;
 ny = 0;
 nz = 0;
 
-% تعریف شدت گرانش
+% Definition of gravity
 g = 9.81;
 
-% محاسبه بردار نتیجه
+% Calculate the result vector
 Rx = Fx;
 Ry = Fy;
 Rz = Fz - g;
 
-% رسم دیاگرام جسم آزاد
+% Draw a free body diagram
 figure
 quiver3(x, y, z, Rx, Ry, Rz, 'LineWidth', 2)
 xlabel('X')

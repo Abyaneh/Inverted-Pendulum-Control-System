@@ -3,26 +3,26 @@ clear
 clc
 syms s;
 
-M = 0.5;  % جرم آرم
-m = 0.2;  % جرم پاندول
-l = 0.3;  % طول پایه پاندول
-I = 0.006;  % مقدار ممان اینرسی آرم
-g = 9.81;  % شتاب نزولی
+M = 0.5;  % arm mass
+m = 0.2;  % The mass of the pendulum
+l = 0.3;  % The length of the base of the pendulum
+I = 0.006;  % The moment of inertia of the arm
+g = 9.81;  % Downward acceleration
 
-% تعریف ماتریس A به صورت نمادین
+% Define the matrix A symbolically
 A = sym([0, 1, 0, 0;
         0, 0, -((M+m)*g*l)/(M+m-m*l^2), 0;
         0, 0, 0, 1;
         0, 0, ((M+m)*g)/(I+m*l^2-M*m*l^2), 0]);
 
-% تعریف ماتریس B به صورت نمادین
+% B Define the matrix B symbolically
 B = sym([0; (m*l)/(M+m-m*l^2); 0; -m*l/(I+m*l^2-M*m*l^2)]);
 
-% تعریف ماتریس C و D برای خروجی s*theta
+% Define matrix C and D for output s*theta
 C = sym([1, 0, 0, 0]);
 D = sym([0]);
 
-% تابع تبدیل به کسری
+% Function to convert to a fraction
 G_sym = simplify(C*inv(s*eye(4)-A)*B+D)
 
 

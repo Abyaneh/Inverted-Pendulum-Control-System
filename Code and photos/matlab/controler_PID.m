@@ -3,12 +3,12 @@ clear
 clc
 syms s;
 
-% تعریف ماتریس A، B، C و D
-M = 0.5; % جرم آرم
-m = 0.2; % جرم پاندول
-l = 0.3; % طول پایه پاندول
-I = 0.006; % مقدار ممان اینرسی آرم
-g = 9.81; % شتاب نزولی
+% Definition of matrix A, B, C and D
+M = 0.5;  % arm mass
+m = 0.2;  % The mass of the pendulum
+l = 0.3;  % The length of the base of the pendulum
+I = 0.006;  % The moment of inertia of the arm
+g = 9.81;  % Downward acceleration
 
 A = [0, 1, 0, 0;
      0, 0, -((M+m)*g*l)/(M+m-m*l^2), 0;
@@ -22,7 +22,7 @@ D = [0];
 
 sys = ss(A,B,C,D);
 
-%تابع تبدیل 
+% conversion function
 [num,den] = ss2tf(A,B,C,D)
 
 printsys(num,den)
