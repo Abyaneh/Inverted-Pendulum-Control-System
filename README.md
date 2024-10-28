@@ -1,33 +1,33 @@
 # Inverted Pendulum Control System
 
-![Project Image_1](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/shape.jpg) 
-
-![Project Image_2](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg) 
-
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Features](#features)
 - [System Dynamics](#system-dynamics)
 - [State-Space Model and Transfer Functions](#state-space-model-and-transfer-functions)
-- [Matlab Code for Free Body Diagram](#matlab-code-for-free-body-diagram)
+- [MATLAB Code for Free Body Diagram](#matlab-code-for-free-body-diagram)
 - [PID Controller and Simulation Results](#pid-controller-and-simulation-results)
 - [Technologies & Tools Used](#technologies--tools-used)
 - [How to Run the Project](#how-to-run-the-project)
 - [Contributing](#contributing)
 - [License](#license)
-- [Back to Top](#)
 
 ## Introduction
 The inverted pendulum is a well-known problem in control theory where the goal is to stabilize a pendulum in an upright position. Using Matlab, this project involves modeling, simulating, and controlling the system with a PID controller to balance the pendulum at 180°, starting from an unstable position.
 
+<p align="center">
+  <img src="https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/shape.jpg" alt="Project Image 1" width="400" style="display: inline-block;" />
+  <img src="https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/1.jpg" alt="Project Image 2" width="400" style="display: inline-block;" />
+</p>
+
+
 [Back to Top](#table-of-contents)
 
 ## Features
-- Stabilization of a non-linear dynamic system using PID control.
-- Free-body diagram and system response simulations.
-- Control system designed and tested in Matlab.
-- Visualizations and graphs of system behavior.
+- Stabilization of a non-linear dynamic system using PID control
+- Free-body diagram and system response simulations
+- Control system designed and tested in MATLAB
+- Visualizations and graphs of system behavior
 
 [Back to Top](#table-of-contents)
 
@@ -58,10 +58,10 @@ G(s) = 0.08798/s³ + 2s/s² - 458.035401
 
 [Back to Top](#table-of-contents)
 
-## Matlab Code for Free Body Diagram
-The free-body diagram is an essential part of understanding the forces acting on the pendulum system. Below is an example Matlab script for generating the diagram:
+## MATLAB Code for Free Body Diagram
+The free-body diagram is an essential part of understanding the forces acting on the pendulum system. Below is an example MATLAB script for generating the diagram:
 ```matlab
-% Matlab code for Free Body Diagram
+% MATLAB code for Free Body Diagram
 close all;
 clear;
 clc;
@@ -107,29 +107,28 @@ The following graphs show the system’s response to step input and the correspo
 
 1. **Step Response of the System:**
 
-Step Response **before** PID control:
+  - Step Response **before** PID control:
 
 ![Step Response Graph](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/70_1.jpg) 
 
-Step Response **after** PID control:
+  - Step Response **after** PID control:
 
 ![Step Response Graph](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/70_2.jpg) 
 
-The graph above shows the system’s response to a step input with the PID controller applied, illustrating how quickly and smoothly the pendulum stabilizes.
+The graph above shows the system’s response to a step input with the PID controller applied, illustrating how quickly and smoothly the pendulum stabilizes.<br>
 
 2. **Impulse Response of the System:**
-   
+
  ![Impulse Response](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/62.jpg) 
 
-This graph shows impulse response.
 
 3. **Root Locus Analysis:**
 
-Root Locus Diagram **before** PID Control:
+  - Root Locus Diagram **before** PID Control:
 
 ![Root Locus Diagram before PID Control](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/76.jpg)
 
-Root Locus Diagram **after** PID Control:
+  - Root Locus Diagram **after** PID Control:
 
 ![Root Locus Diagram after PID Control](https://github.com/Abyaneh/Inverted-Pendulum-Control-System/blob/main/Code%20and%20photos/picture/77.jpg)
     
@@ -138,9 +137,9 @@ The root locus plot shows the placement of poles and zeros of the system both be
 [Back to Top](#table-of-contents)
 
 ## Technologies & Tools Used
-- **Matlab/Simulink**: Dynamic modeling, control design, and simulation.
-- **Control Theory**: State-space analysis, PID controller design.
-- **Visualization**: Free-body diagrams, step response, impulse response, and root locus plots.
+- **MATLAB/Simulink**: Dynamic modeling, control design, and simulation
+- **Control Theory**: State-space analysis, PID controller design
+- **Visualization**: Free-body diagrams, step response, impulse response, and root locus plots
 
 [Back to Top](#table-of-contents)
 
