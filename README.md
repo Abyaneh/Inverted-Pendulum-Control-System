@@ -147,7 +147,7 @@ The root locus plot shows the placement of poles and zeros of the system both be
 1. Clone the repository:
    ```bash
    git clone https://github.com/Abyaneh/Inverted-Pendulum-Control-System.git
-   cd Inverted-Pendulum-Control-System
+   cd Inverted-Pendulum-Control-System/code
    ```
 2. Open Matlab and run `pendulum_control.m` to simulate the system.
 3. View the generated graphs and results for system behavior analysis.
